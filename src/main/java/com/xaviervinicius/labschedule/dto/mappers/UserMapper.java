@@ -2,10 +2,11 @@ package com.xaviervinicius.labschedule.dto.mappers;
 
 import com.xaviervinicius.labschedule.dto.UserDto;
 import com.xaviervinicius.labschedule.models.UserModel.UserModel;
+import com.xaviervinicius.labschedule.models.scheduleModel.ScheduleModel;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", imports = {ScheduleModel.class})
 public interface UserMapper {
     @Mapping(
             target = "schedulesIds",

@@ -42,4 +42,8 @@ public class LabModel {
     public boolean canSchedule(){
         return this.state == LabState.AVAILABLE;
     }
+
+    public LabModel(Long id){
+        this.id = id;
+    }
 }
