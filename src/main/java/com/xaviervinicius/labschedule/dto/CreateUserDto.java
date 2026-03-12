@@ -24,4 +24,5 @@ public record CreateUserDto(
     public boolean samePasswords(){
         return password.equals(confirmPassword);
     }
+    public boolean isAdminCreation(){return role == Role.ADMIN;}
 }

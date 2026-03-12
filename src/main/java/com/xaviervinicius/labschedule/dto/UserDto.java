@@ -1,5 +1,6 @@
 package com.xaviervinicius.labschedule.dto;
 
+import com.xaviervinicius.labschedule.models.UserModel.AccountState;
 import com.xaviervinicius.labschedule.models.UserModel.Role;
 
 import java.time.Instant;
@@ -13,6 +14,7 @@ public record UserDto(
         String password,
         List<UUID> schedulesIds,
         Role role,
+        AccountState state,
         Instant createdAt
 ) {
 }
